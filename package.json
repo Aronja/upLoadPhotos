@@ -1,0 +1,25 @@
+{
+  "name": "upLoadPhotoApp",
+  "version": "1.0.0",
+  "description": "this is an app where you can upload pictures I'm using React/Redux and probably Sagas for the UIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development --output ./out/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aronja/upLoadPhotos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aronja/upLoadPhotos/issues"
+  },
+  "homepage": "https://github.com/Aronja/upLoadPhotos#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
