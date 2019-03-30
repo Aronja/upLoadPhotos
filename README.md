@@ -12,3 +12,4 @@ Step 1: Create webpack 4 config
  - npm run dev outputs a bundled main.js to dist/main.js
  - set mode to dev or prod
  - specify output file 
+ - setting up babel and react
