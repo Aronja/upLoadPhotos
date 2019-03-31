@@ -1,15 +1,10 @@
-import './index.html'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () =>(
-    <div>
-        Hello world!!!!!!!!!!!!!!!!!!!!!!!!!!
-    </div>
-)
-
+const title = 'My Minimal React Webpack Babel Setup';
 
 ReactDOM.render(
-    <App/>,
-    document.getElementById('root')
-)
+  <div>{title}</div>,
+  document.getElementById('app')
+);
+

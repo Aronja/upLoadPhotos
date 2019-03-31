@@ -1,20 +1,29 @@
-var path    = require('path');
-var hwp     = require('html-webpack-plugin');
+var webpack    = require('webpack');
 
 module.exports = {
-    entry: path.join(__dirname, './src/index.js'),
-    output: {
-        filename: 'build.js',
-        path: path.join(__dirname, '/dist')
-    },
+    entry: './src/index.js',
     module:{
-        rules:[{
+        rules:[
+          {
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            test: /\.jsx?$$/,
-            loader: 'babel-loader'
-        }]
-    },
-    plugins:[
-        new hwp({template:path.join(__dirname, './src/index.html')})
-    ]
-}
+            use: ['babel-loader']
+       }
+     ]
+   },
+   resolve: {
+      extensions: ['*', '.js', '.jsx']    
+  },
+  output: {
+     path: __dirname + '/dist',
+     publicPath: '/',
+     filename: 'bundle.js'
+  },
+  plugins:[
+    new webpack.HotModuleReplacementPlugin()
+ ],
+ devServer: {
+   contentBase: './dist',
+    hot: true
+ }
+};
